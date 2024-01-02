@@ -1,0 +1,179 @@
+/* App */
+.app {
+  background-color: rgb(228, 241, 245);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+
+/* UsersTable */
+.container {
+  width: 100%;
+  display: flex;
+
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+  margin: 100px auto 0 auto;
+  width: 90%;
+  max-width: 90%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background-color: rgb(205, 235, 245);
+}
+
+.divTable {
+  width: 50%;
+  overflow: auto;
+}
+
+
+/* UserPosts */
+.divUserPosts {
+  width: 45%;
+  text-align: center;
+  padding: 40px 0 0 15px;
+}
+
+.divPosts {
+  width: 20%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.btnNewPost {
+  height: 40px;
+  width: 150px;
+}
+
+
+/* NewPost */
+#divNewPost {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#formNewPost {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid rgb(43, 126, 154);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+#formNewPost p {
+  text-align: center;
+}
+
+#formNewPost input[type=text] {
+  width: 300px;
+  margin: 10px auto;
+  padding: 12px 20px;
+  border: none;
+  background: #f1f1f1;
+}
+
+#formNewPost label {
+  margin: 5px 0 5px 0px;
+  font-weight: 700;
+  text-align: left;
+}
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#btnCreate {
+  margin: 10px auto;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+
+@media screen and (max-width: 790px) {
+  html {
+    font-size: 80%;
+  }
+
+  /* UsersTable */
+  .container {
+    flex-direction: column;
+  }
+
+  .divTable {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* UserPosts */
+  .divUserPosts {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  /* UsersTable */
+  table {
+    margin: 45px auto 0 auto;
+  }
+
+  
+  /* UserPosts */
+  .divUserPosts {
+    padding: 30px 0 30px 0;
+  }
+
+
+  /* NewPost */
+  #formNewPost {
+    width: calc(80% - 40px);
+    padding: 5%;
+  }
+
+  #formNewPost input[type=text] {
+    width: calc(95% - 40px);
+  }
+}
